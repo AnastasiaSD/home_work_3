@@ -6,7 +6,10 @@ namespace HomeWork3
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var builder = new BaseEmailBuilder();
+            var director = new BuilderDirector(builder);
+            var email = director.Build();
+            Console.WriteLine(email);
         }
     }
 }
